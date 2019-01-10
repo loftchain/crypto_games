@@ -15,6 +15,9 @@ import { AppComponent } from './app.component';
 import {HeaderComponent} from "./navigation/header/header.component";
 import {SidenavListComponent} from "./navigation/sidenav-list/sidenav-list.component";
 import { FooterComponent } from './footer/footer.component';
+import { MainComponent } from './main/main.component';
+import { StatisticComponent } from './main/statistic/statistic.component';
+import { GamesComponent } from './main/games/games.component';
 
 
 
@@ -23,7 +26,10 @@ import { FooterComponent } from './footer/footer.component';
     AppComponent,
     HeaderComponent,
     SidenavListComponent,
-    FooterComponent
+    FooterComponent,
+    MainComponent,
+    StatisticComponent,
+    GamesComponent
   ],
   imports: [
     BrowserModule,
