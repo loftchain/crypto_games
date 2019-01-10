@@ -6,6 +6,7 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  @Output() changeLanguage = new EventEmitter<string>();
   @Output() toggleSidenav = new EventEmitter();
   constructor() { }
 
@@ -14,5 +15,9 @@ export class HeaderComponent implements OnInit {
 
   onToggleSidenav() {
     this.toggleSidenav.emit();
+  }
+
+  onChangeLanguage(event) {
+    this.changeLanguage.next(event);
   }
 }

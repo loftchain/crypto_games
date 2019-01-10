@@ -11,7 +11,7 @@
     <div class="header__group">
       <ul class="header__list">
         <li class="header__item">
-          <a class="header__link header__link--text">Игры</a>
+          <a class="header__link header__link--text">{{ 'header.games' | translate }}</a>
         </li>
         <li class="header__item">
           <a class="header__link header__link--text">Частые вопросы</a>
@@ -36,7 +36,13 @@
       </ul>
     </div>
     <div class="header__language">
-      Language
+      <button mat-button [matMenuTriggerFor]="menu">
+        <i class="fas fa-globe"></i>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="onChangeLanguage('en')">English</button>
+        <button mat-menu-item (click)="onChangeLanguage('ru')">Russian</button>
+      </mat-menu>
     </div>
   </mat-toolbar>
 </header>

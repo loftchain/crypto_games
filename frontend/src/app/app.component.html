@@ -3,8 +3,13 @@
     <app-sidenav-list (closeSidenav)="sidenav.close()"></app-sidenav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <app-header (toggleSidenav)="sidenav.toggle()"></app-header>
+    <app-header
+      (toggleSidenav)="sidenav.toggle()"
+      (changeLanguage)="useLanguage($event)">
+    </app-header>
     <main>
     </main>
+    <footer class="footer">
+    </footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
