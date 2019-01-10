@@ -14,27 +14,48 @@
     margin-left: auto;
     max-width: 500px;
     width: 100%;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
   }
 
   &__list {
     display: flex;
-    margin: 0 -5px;
+    margin: 0 -10px;
     padding: 0;
     list-style: none;
   }
 
   &__item {
-    margin: 0 5px;
+    margin: 0 10px;
   }
 
   &__link {
     &--text:hover {
       text-decoration: underline;
     }
+
+    &--social {
+      font-size: 24px;
+    }
   }
 
   &__language {
-    margin-left: 30px;
+    margin-left: 40px;
+
+    @media (max-width: 767px) {
+      margin-left: auto;
+    }
+  }
+}
+
+.header__link i {
+  opacity: 0.75;
+  transition: opacity 0.5s;
+
+  &:hover {
+    opacity: 1;
   }
 }
 
