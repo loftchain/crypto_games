@@ -19,6 +19,9 @@ import { MainComponent } from './main/main.component';
 import { StatisticComponent } from './main/statistic/statistic.component';
 import { GamesComponent } from './main/games/games.component';
 import { FaqsComponent } from './faqs/faqs.component';
+import { GameComponent } from './game/game.component';
+import { CoinComponent } from './game/coin/coin.component';
+import {FormsModule} from "@angular/forms";
 
 
 
@@ -31,10 +34,13 @@ import { FaqsComponent } from './faqs/faqs.component';
     MainComponent,
     StatisticComponent,
     GamesComponent,
-    FaqsComponent
+    FaqsComponent,
+    GameComponent,
+    CoinComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
