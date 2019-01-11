@@ -18,6 +18,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
 import { StatisticComponent } from './main/statistic/statistic.component';
 import { GamesComponent } from './main/games/games.component';
+import { FaqsComponent } from './faqs/faqs.component';
 
 
 
@@ -29,7 +30,8 @@ import { GamesComponent } from './main/games/games.component';
     FooterComponent,
     MainComponent,
     StatisticComponent,
-    GamesComponent
+    GamesComponent,
+    FaqsComponent
   ],
   imports: [
     BrowserModule,
