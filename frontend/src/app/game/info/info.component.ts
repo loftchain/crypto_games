@@ -15,17 +15,24 @@ export class InfoComponent implements OnInit, OnDestroy {
   jackpot = 0.12;
   jackpotMinBet = 10;
   toDecimal = 100;
-  betSubscription: Subscription;
+  winChance;
+  betSub: Subscription;
+  winChanceSub: Subscription;
 
   constructor(private gameService: GameService) { }
 
   ngOnInit() {
-    this.betSubscription = this.gameService.betChanged.subscribe(
+    this.betSub = this.gameService.betChanged.subscribe(
       bet => {
         this.bet = bet;
         this.changeCommissionPercent();
       }
     );
+
+    this.winChanceSub = this.gameService.winChanceChanged
+      .subscribe(
+        chance => this.winChance = chance
+      );
   }
 
   changeCommissionPercent() {
@@ -39,6 +46,7 @@ export class InfoComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.betSubscription.unsubscribe();
+    this.betSub.unsubscribe();
+    this.winChanceSub.unsubscribe();
   }
 }

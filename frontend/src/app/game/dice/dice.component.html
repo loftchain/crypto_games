@@ -1,3 +1,27 @@
-<p>
-  dice works!
-</p>
+<div class="dice">
+  <div class="descr">
+    <h1 class="descr__title">Кубик</h1>
+    <ul class="descr__list">
+      <li class="descr__item">
+        <i class="fas fa-dice-one" (click)="toggleActiveDice($event)"></i>
+      </li>
+      <li class="descr__item">
+        <i class="fas fa-dice-two" (click)="toggleActiveDice($event)"></i>
+      </li>
+      <li class="descr__item">
+        <i class="fas fa-dice-three" (click)="toggleActiveDice($event)"></i>
+      </li>
+      <li class="descr__item">
+        <i class="fas fa-dice-four" (click)="toggleActiveDice($event)"></i>
+      </li>
+      <li class="descr__item">
+        <i class="fas fa-dice-five" (click)="toggleActiveDice($event)"></i>
+      </li>
+      <li class="descr__item">
+        <i class="fas fa-dice-six active" (click)="toggleActiveDice($event)"></i>
+      </li>
+    </ul>
+    <p class="small-text">Орел или Решка?</p>
+  </div>
+  <app-bets></app-bets>
+</div>
