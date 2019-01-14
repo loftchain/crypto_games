@@ -1,4 +1,5 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {GameService} from "../game.service";
 
 @Component({
   selector: 'app-coin',
@@ -19,7 +20,7 @@ export class CoinComponent implements OnInit {
   minusDisabled = true;
   plusDisabled = false;
 
-  constructor() { }
+  constructor(private gameService: GameService) { }
 
   ngOnInit() {
   }
@@ -28,9 +29,11 @@ export class CoinComponent implements OnInit {
     if (this.bet > this.minValue && operation === '-') {
       this.bet -= this.step;
       this.disabledButton();
+      this.gameService.betChanged.next(this.bet);
     } else if (this.bet < this.maxValue && operation === '+') {
       this.bet += this.step;
       this.disabledButton();
+      this.gameService.betChanged.next(this.bet);
     }
   }
 
@@ -38,6 +41,7 @@ export class CoinComponent implements OnInit {
     const numValue = +event.target.textContent;
     this.bet = numValue;
     this.disabledButton();
+    this.gameService.betChanged.next(this.bet);
   }
 
   disabledButton() {
