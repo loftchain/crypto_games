@@ -22,8 +22,7 @@ import { FaqsComponent } from './faqs/faqs.component';
 import { GameComponent } from './game/game.component';
 import { CoinComponent } from './game/coin/coin.component';
 import {FormsModule} from "@angular/forms";
-
-
+import { Web3Component } from './game/web3/web3.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +35,8 @@ import {FormsModule} from "@angular/forms";
     GamesComponent,
     FaqsComponent,
     GameComponent,
-    CoinComponent
+    CoinComponent,
+    Web3Component
   ],
   imports: [
     BrowserModule,

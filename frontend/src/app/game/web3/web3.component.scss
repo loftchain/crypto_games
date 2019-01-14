@@ -1,0 +1,46 @@
+.web3 {
+  padding: 30px 15px;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  text-align: center;
+
+  &__desktop {
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &__mobile {
+    display: none;
+    @media (max-width: 767px) {
+      display: block;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  &__link {
+    display: block;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 30px;
+    text-decoration: none;
+    transition: background-color 0.25s ease-in-out;
+    color: #ffffff;
+    font-size: 18px;
+
+    &:hover {
+      background-color: #969fb7;
+    }
+  }
+}
