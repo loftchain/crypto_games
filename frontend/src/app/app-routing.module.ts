@@ -5,13 +5,15 @@ import {FaqsComponent} from "./faqs/faqs.component";
 import {GameComponent} from "./game/game.component";
 import {CoinComponent} from "./game/coin/coin.component";
 import {DiceComponent} from "./game/dice/dice.component";
+import {TwoDiceComponent} from "./game/two-dice/two-dice.component";
 
 const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'faqs', component: FaqsComponent },
   { path: 'game', component: GameComponent, children: [
       { path: 'coin', component: CoinComponent },
-      { path: 'dice', component: DiceComponent }
+      { path: 'dice', component: DiceComponent },
+      { path: 'two-dice', component: TwoDiceComponent },
     ] },
 ];
 

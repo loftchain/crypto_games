@@ -17,8 +17,8 @@ export class DiceComponent implements OnInit {
   }
 
   toggleActiveDice(event) {
-    const dices = document.body.querySelectorAll('.dice i');
-    const activeDices = document.body.querySelectorAll('.dice i.active');
+    const dices = document.body.querySelectorAll('.dice .dice-item');
+    const activeDices = document.body.querySelectorAll('.dice .dice-item.active');
     if (activeDices.length < dices.length - 1) {
       if (event.target.classList.contains('active') && activeDices.length !== 1) {
         event.target.classList.remove('active');
@@ -34,29 +34,8 @@ export class DiceComponent implements OnInit {
   }
 
   changeWinChance() {
-    const dices = document.body.querySelectorAll('.dice i');
-    const activeDices = document.body.querySelectorAll('.dice i.active');
+    const dices = document.body.querySelectorAll('.dice .dice-item');
+    const activeDices = document.body.querySelectorAll('.dice .dice-item.active');
     this.winChance = ((activeDices.length / dices.length) * 100).toFixed(2);
-    
-    // switch (activeDices.length) {
-    //   case 1:
-    //     this.winChance = 16.67;
-    //     break;
-    //   case 2:
-    //     this.winChance = 33.33;
-    //     break;
-    //   case 3:
-    //     this.winChance = 50;
-    //     break;
-    //   case 4:
-    //     this.winChance = 66.67;
-    //     break;
-    //   case 5:
-    //     this.winChance = 83.33;
-    //     break;
-    //   default:
-    //     this.winChance = 16.67;
-    //     break;
-    // }
   }
 }

@@ -27,6 +27,7 @@ import { InfoComponent } from './game/info/info.component';
 import {GameService} from "./game/game.service";
 import { DiceComponent } from './game/dice/dice.component';
 import { BetsComponent } from './game/bets/bets.component';
+import { TwoDiceComponent } from './game/two-dice/two-dice.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { BetsComponent } from './game/bets/bets.component';
     Web3Component,
     InfoComponent,
     DiceComponent,
-    BetsComponent
+    BetsComponent,
+    TwoDiceComponent
   ],
   imports: [
     BrowserModule,

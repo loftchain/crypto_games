@@ -48,6 +48,7 @@ export class BetsComponent implements OnInit {
   disabledButton() {
     if (this.bet === this.maxValue) {
       this.plusDisabled = true;
+      this.minusDisabled = false;
     } else if (this.bet === this.minValue) {
       this.minusDisabled = true;
     } else {
