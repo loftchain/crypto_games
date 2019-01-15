@@ -29,6 +29,7 @@ import { DiceComponent } from './game/dice/dice.component';
 import { BetsComponent } from './game/bets/bets.component';
 import { TwoDiceComponent } from './game/two-dice/two-dice.component';
 import { EtherollComponent } from './game/etheroll/etheroll.component';
+import { HistoryComponent } from './game/history/history.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { EtherollComponent } from './game/etheroll/etheroll.component';
     DiceComponent,
     BetsComponent,
     TwoDiceComponent,
-    EtherollComponent
+    EtherollComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,
