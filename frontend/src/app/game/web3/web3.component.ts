@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./web3.component.scss']
 })
 export class Web3Component implements OnInit {
+  web3 = false;
 
   constructor() { }
 
