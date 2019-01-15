@@ -8,12 +8,12 @@ import {GameService} from "../game.service";
 })
 
 export class DiceComponent implements OnInit {
-  winChance: number;
+  winChance = 16.67;
 
   constructor(private gameService: GameService) { }
 
   ngOnInit() {
-
+    this.gameService.winChanceChanged.next(this.winChance);
   }
 
   toggleActiveDice(event) {

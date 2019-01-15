@@ -1,5 +1,5 @@
-import {Subject} from "rxjs/internal/Subject";
-import {BehaviorSubject} from "rxjs/internal/BehaviorSubject";
+import {Subject} from "rxjs";
+import {BehaviorSubject} from "rxjs";
 
 
 export class GameService {
