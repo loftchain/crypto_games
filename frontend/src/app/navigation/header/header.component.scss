@@ -32,12 +32,12 @@
   }
 
   &__link {
-    &--text:hover {
-      text-decoration: underline;
-    }
-
     &--social {
       font-size: 24px;
+    }
+
+    &--active {
+      text-decoration: underline;
     }
   }
 

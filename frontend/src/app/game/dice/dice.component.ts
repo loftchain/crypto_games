@@ -36,6 +36,6 @@ export class DiceComponent implements OnInit {
   changeWinChance() {
     const dices = document.body.querySelectorAll('.dice .dice-item');
     const activeDices = document.body.querySelectorAll('.dice .dice-item.active');
-    this.winChance = ((activeDices.length / dices.length) * 100).toFixed(2);
+    this.winChance = +((activeDices.length / dices.length) * 100).toFixed(2);
   }
 }

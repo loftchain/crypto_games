@@ -4,5 +4,5 @@ import {BehaviorSubject} from "rxjs/internal/BehaviorSubject";
 
 export class GameService {
   betChanged = new BehaviorSubject<number>(1);
-  winChanceChanged = new BehaviorSubject<number>();
+  winChanceChanged = new Subject<number>();
 }

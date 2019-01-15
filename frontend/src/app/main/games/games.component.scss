@@ -46,6 +46,7 @@
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
 
     &:hover {
       background-position: 50% 0;
@@ -54,6 +55,8 @@
   }
 
   &__item-link {
+    color: #ffffff;
+    text-decoration: none;
     i {
       font-size: 40px;
     }
