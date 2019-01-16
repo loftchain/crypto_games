@@ -15,8 +15,18 @@
   }
 
   &__item {
-    width: 33%;
-    border: 1px solid red;
+
+    &--game {
+      width: 40%;
+    }
+
+    &--info {
+      width: 25%;
+    }
+
+    &--history {
+      width: 33%;
+    }
 
     @media (max-width: 767px) {
       width: 100%;
