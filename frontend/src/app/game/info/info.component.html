@@ -9,16 +9,16 @@
     <li class="info__item">
       <h4 class="info__item-title">Выигрыш</h4>
       <h3 class="info__big-text">
-        {{ prize }} x
+        {{ coefficient }} x
       </h3>
       <p class="info__small-text color1">
         <span>Выигрыш</span>
-        {{ winAmount }} ETH
+        {{ (winAmount / toDecimal) | number:'1.3-3' }} ETH
       </p>
       <p class="info__small-text">
         {{ commissionPercent }}
         % комиссия.
-        <span *ngIf="bet >= jackpotMinBet">0.001 ETH в джекпот</span>
+        <span *ngIf="bet >= jackpotMinBet">{{(jackpotCommission / toDecimal) | number:'1.3-3' }} ETH в джекпот</span>
       </p>
     </li>
     <li class="info__item">

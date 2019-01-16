@@ -14,5 +14,4 @@ export class CoinComponent implements OnInit {
   ngOnInit() {
     this.gameService.winChanceChanged.next(this.winChance);
   }
-
 }

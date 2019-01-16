@@ -8,14 +8,15 @@ import { Subscription } from "rxjs/internal/Subscription";
   styleUrls: ['./info.component.scss']
 })
 export class InfoComponent implements OnInit, OnDestroy {
-  prize = 1.94;
-  winAmount = 0.019;
+  coefficient = 1.94;
+  winAmount;
   commissionPercent = 3;
   bet;
   jackpot = 0.12;
   jackpotMinBet = 10;
   toDecimal = 100;
   winChance;
+  jackpotCommission = 0.1;
   betSub: Subscription;
   winChanceSub: Subscription;
 
@@ -26,12 +27,16 @@ export class InfoComponent implements OnInit, OnDestroy {
       bet => {
         this.bet = bet;
         this.changeCommissionPercent();
+        this.changeCoef();
       }
     );
 
     this.winChanceSub = this.gameService.winChanceChanged
       .subscribe(
-        chance => this.winChance = chance
+        chance => {
+          this.winChance = chance;
+          this.changeCoef();
+        }
       );
   }
 
@@ -43,6 +48,18 @@ export class InfoComponent implements OnInit, OnDestroy {
     } else {
       this.commissionPercent = 1;
     }
+  }
+
+  changeCoef() {
+    const hundred = 100;
+    const percent = ((hundred / this.winChance) * this.commissionPercent) / hundred;
+    this.coefficient = (hundred / this.winChance) - percent;
+
+    this.changeWinAmount();
+  }
+
+  changeWinAmount() {
+    this.winAmount = this.bet * this.coefficient;
   }
 
   ngOnDestroy() {

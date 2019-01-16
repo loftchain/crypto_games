@@ -8,7 +8,6 @@ import {GameService} from "../game.service";
 })
 export class HistoryComponent implements OnInit {
   usersInfoArray = [];
-  arrowDirection = 'right';
   numbersDictionary = {
     'one': 1,
     'two': 2,
