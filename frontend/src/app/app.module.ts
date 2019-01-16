@@ -18,18 +18,8 @@ import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
 import { StatisticComponent } from './main/statistic/statistic.component';
 import { GamesComponent } from './main/games/games.component';
-import { FaqsComponent } from './faqs/faqs.component';
-import { GameComponent } from './game/game.component';
-import { CoinComponent } from './game/coin/coin.component';
 import {FormsModule} from "@angular/forms";
-import { Web3Component } from './game/web3/web3.component';
-import { InfoComponent } from './game/info/info.component';
 import {GameService} from "./game/game.service";
-import { DiceComponent } from './game/dice/dice.component';
-import { BetsComponent } from './game/bets/bets.component';
-import { TwoDiceComponent } from './game/two-dice/two-dice.component';
-import { EtherollComponent } from './game/etheroll/etheroll.component';
-import { HistoryComponent } from './game/history/history.component';
 
 @NgModule({
   declarations: [
@@ -39,25 +29,15 @@ import { HistoryComponent } from './game/history/history.component';
     FooterComponent,
     MainComponent,
     StatisticComponent,
-    GamesComponent,
-    FaqsComponent,
-    GameComponent,
-    CoinComponent,
-    Web3Component,
-    InfoComponent,
-    DiceComponent,
-    BetsComponent,
-    TwoDiceComponent,
-    EtherollComponent,
-    HistoryComponent
+    GamesComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
+    AppRoutingModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
