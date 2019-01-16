@@ -3,13 +3,13 @@
     <li class="info__item">
       <h4 class="info__item-title">Шанс выиграть</h4>
       <h3 class="info__big-text">
-        {{ winChance | number:'1.2-2' }}%
+        {{ winChance | number:'1.2-2' }}<small>%</small>
       </h3>
     </li>
     <li class="info__item">
       <h4 class="info__item-title">Выигрыш</h4>
       <h3 class="info__big-text">
-        {{ coefficient }} x
+        {{ coefficient | number:'1.2-2' }}<small>x</small>
       </h3>
       <p class="info__small-text color1">
         <span>Выигрыш</span>
