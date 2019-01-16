@@ -13,6 +13,7 @@ import { DiceComponent } from "./dice/dice.component";
 import { HistoryComponent } from "./history/history.component";
 import { EtherollComponent } from "./etheroll/etheroll.component";
 import { TwoDiceComponent } from "./two-dice/two-dice.component";
+import {SharedModule} from "../shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { TwoDiceComponent } from "./two-dice/two-dice.component";
     CommonModule,
     FormsModule,
     MaterialModule,
-    GameRoutingModule
+    GameRoutingModule,
+    SharedModule
   ]
 })
 

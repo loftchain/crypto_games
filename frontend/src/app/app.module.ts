@@ -18,8 +18,9 @@ import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
 import { StatisticComponent } from './main/statistic/statistic.component';
 import { GamesComponent } from './main/games/games.component';
-import {FormsModule} from "@angular/forms";
-import {GameService} from "./game/game.service";
+import { FormsModule } from "@angular/forms";
+import { GameService } from "./game/game.service";
+import { SharedModule } from "./shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import {GameService} from "./game/game.service";
     MaterialModule,
     HttpClientModule,
     AppRoutingModule,
+    SharedModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
