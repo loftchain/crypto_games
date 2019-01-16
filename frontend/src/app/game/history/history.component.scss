@@ -73,6 +73,9 @@
 }
 
 .main {
+  position: relative;
+  max-height: 100px;
+  overflow: auto;
   &__list {
     margin: 0;
     padding: 0;
